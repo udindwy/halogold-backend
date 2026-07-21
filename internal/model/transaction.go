@@ -2,7 +2,6 @@ package model
 
 import "time"
 
-// Transaction merepresentasikan tabel transactions di database.
 type Transaction struct {
 	ID        uint      `gorm:"primaryKey;autoIncrement" json:"id"`
 	UserID    uint      `gorm:"not null" json:"user_id"`
