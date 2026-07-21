@@ -1,6 +1,6 @@
 # HaloGold Backend API
 
-HaloGold adalah backend API untuk platform investasi emas digital yang memungkinkan pengguna melihat harga, membeli, dan menjual emas secara digital. Proyek ini dibangun mengutamakan *Clean Architecture* (Handler -> Service -> Repository -> Database) dengan *error handling* dan validasi request yang ketat.
+HaloGold adalah backend API untuk platform investasi emas digital yang memungkinkan pengguna melihat harga, membeli, dan menjual emas secara digital. 
 
 ---
 
