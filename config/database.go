@@ -4,6 +4,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/udindwy/halogold-backend/internal/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -32,7 +33,11 @@ func ConnectDatabase(cfg *Config) {
 }
 
 func RunMigrations() {
-	log.Println("AutoMigrate selesai dijalankan (saat ini belum ada model)")
+	err := DB.AutoMigrate(&model.User{}, &model.Transaction{})
+	if err != nil {
+		log.Fatalf("Gagal menjalankan migrasi: %v", err)
+	}
+	log.Println("AutoMigrate selesai dijalankan, tabel User dan Transaction telah dibuat/diupdate")
 }
 
 func CloseDatabase() {
