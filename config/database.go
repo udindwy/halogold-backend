@@ -22,9 +22,9 @@ func ConnectDatabase(cfg *Config) {
 		log.Fatalf("Gagal mendapatkan instance database: %v", err)
 	}
 
-	sqlDB.SetMaxIdleConns(10)           
-	sqlDB.SetMaxOpenConns(100)          
-	sqlDB.SetConnMaxLifetime(time.Hour) 
+	sqlDB.SetMaxIdleConns(10)
+	sqlDB.SetMaxOpenConns(100)
+	sqlDB.SetConnMaxLifetime(time.Hour)
 
 	DB = db
 	log.Println("Berhasil terhubung ke database PostgreSQL")
