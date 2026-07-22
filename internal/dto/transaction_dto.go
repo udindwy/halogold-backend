@@ -3,11 +3,11 @@ package dto
 import "time"
 
 type BuyRequest struct {
-	Amount float64 `json:"amount" binding:"required,gt=0"`
+	Amount float64 `json:"amount" binding:"gt=0"`
 }
 
 type SellRequest struct {
-	Gram float64 `json:"gram" binding:"required,gt=0"`
+	Gram float64 `json:"gram" binding:"gt=0"`
 }
 
 type PriceResponse struct {

@@ -8,7 +8,7 @@ import (
 )
 
 type TestStruct struct {
-	Amount float64 `validate:"required,gt=0"`
+	Amount float64 `validate:"gt=0"`
 	Gram   float64 `validate:"gt=0"`
 }
 
